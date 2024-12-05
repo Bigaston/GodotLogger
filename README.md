@@ -10,3 +10,6 @@ git subrepo clone git@github.com:Bigaston/me.bigaston.logger.git addons/me.bigas
 ```
 
 Then, you can use `git subrepo pull addons/me.bigaston.logger` and `git subrepo pull addons/me.bigaston.logger`
+
+## Usage
+Enable the addon on Godot Settings, the you can now use **Logger.info**, **Logger.warn** and **Logger.error**

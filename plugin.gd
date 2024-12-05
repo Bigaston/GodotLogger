@@ -7,7 +7,7 @@ const DEFAULT_LOG_LEVEL = 0
 const DEFAULT_LOG_COLOR = {"_": Color.GRAY}
 
 func _enable_plugin():
-	add_autoload_singleton("Logger", "Logger.gd")
+	add_autoload_singleton("GlobalLogger", "GlobalLogger.gd")
 	
 	if !ProjectSettings.has_setting(LOG_LEVEL_NAME):
 		ProjectSettings.set_setting(LOG_LEVEL_NAME, DEFAULT_LOG_LEVEL)
@@ -20,4 +20,4 @@ func _enable_plugin():
 		ProjectSettings.set_as_basic(LOG_COLOR_NAME, true)
 	
 func _disable_plugin():
-	remove_autoload_singleton("Logger")
+	remove_autoload_singleton("GlobalLogger")
