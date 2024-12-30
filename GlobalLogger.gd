@@ -23,11 +23,7 @@ func log(message: String, group: String = "_", level: LogLevel = LogLevel.Log, c
 	if !is_log_level(level):
 		return
 		
-	var g_color: Color
-	
-	if color != null:
-		color = g_color
-	else:
+	if color == null:
 		color = group_color.get(group, Color.GRAY)
 	
 	print_rich(LOG_FORMAT_STRING.format({

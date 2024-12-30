@@ -2,7 +2,7 @@ extends Node
 class_name Logger
 
 var group: String
-var color: Color
+var color: Color = Color.GRAY
 
 func _init(_group: String, _color):
 	group = _group
