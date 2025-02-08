@@ -21,3 +21,7 @@ func warn(message: String):
 	
 func error(message: String):
 	GlobalLogger.log(message, group, GlobalLogger.LogLevel.Error, color)
+
+func check(condition: bool, message: String):
+	if !condition:
+		GlobalLogger.log(message, group, GlobalLogger.LogLevel.Error, color)
