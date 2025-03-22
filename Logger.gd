@@ -4,15 +4,14 @@ class_name Logger
 var group: String
 var color: Color = Color.GRAY
 
+const consts = preload("res://addons/me.bigaston.logger/consts.gd")
+
 func _init(_group: String, _color):
 	group = _group
 	
 	if _color != null:
 		color = _color
 
-func _ready():
-	var log_level_setting_name = preload("res://addons/me.bigaston.logger/plugin.gd")
-	
 func info(message: String):
 	GlobalLogger.log(message, group, GlobalLogger.LogLevel.Info, color)
 	

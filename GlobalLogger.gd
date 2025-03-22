@@ -9,12 +9,11 @@ const level_color = ["gray", "white", "orange", "red"]
 enum LogLevel {Log, Info, Warning, Error}
 
 const LOG_FORMAT_STRING = "[b][color=gray][[color={level_color}]{level}[/color] | [color={group_color}]{group}[/color]][/color][/b] {message}"
+const consts = preload("res://addons/me.bigaston.logger/consts.gd")
 
 func _ready():
-	var log_level_setting_name = preload("res://addons/me.bigaston.logger/plugin.gd")
-	
-	log_level = ProjectSettings.get_setting(log_level_setting_name.LOG_LEVEL_NAME)
-	group_color = ProjectSettings.get_setting(log_level_setting_name.LOG_COLOR_NAME)
+	log_level = ProjectSettings.get_setting(consts.LOG_LEVEL_NAME)
+	group_color = ProjectSettings.get_setting(consts.LOG_COLOR_NAME)
 
 func is_log_level(level: int):
 	return level >= log_level
