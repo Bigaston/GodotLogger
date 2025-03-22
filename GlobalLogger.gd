@@ -8,7 +8,7 @@ var group_color: Dictionary = {
 const level_color = ["gray", "white", "orange", "red"]
 enum LogLevel {Log, Info, Warning, Error}
 
-const LOG_FORMAT_STRING = "[b][color=gray][[color={level_color}]{level}[/color] | [color={group_color}]{group}[/color]][/color][/b] {message}"
+const LOG_FORMAT_STRING = "[b][color=gray][[/color][color={level_color}]{level}[/color] | [color={group_color}]{group}[/color][color=gray]][/color][/b] {message}"
 const consts = preload("res://addons/me.bigaston.logger/consts.gd")
 
 func _ready():
